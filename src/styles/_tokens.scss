@@ -1,0 +1,30 @@
+:root {
+    /* spacing */
+    --container-max: 1100px;
+  
+    /* colors - light */
+    --bg: #0b0c10;
+    --surface: #11131a;
+    --text: #f2f4f8;
+    --muted: #b8bec9;
+    --border: rgba(255, 255, 255, 0.12);
+    --accent: #7c5cff;
+  
+    /* effects */
+    --radius: 14px;
+  }
+  
+  html[data-theme="light"] {
+    --bg: #ffffff;
+    --surface: #f6f7fb;
+    --text: #101114;
+    --muted: #4b5563;
+    --border: rgba(0, 0, 0, 0.12);
+    --accent: #5b6cff;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
