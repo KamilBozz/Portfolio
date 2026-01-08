@@ -1,0 +1,26 @@
+.book-page__lead {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 70ch;
+}
+
+.book-page__embed {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.book-page__iframe {
+  width: 100%;
+  height: 760px; /* adjust later if needed */
+  border: 0;
+  display: block;
+}
+
+.book-page__note {
+  margin-top: 14px;
+  color: var(--muted);
+}

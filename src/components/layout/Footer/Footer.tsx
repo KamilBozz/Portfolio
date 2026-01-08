@@ -1,14 +1,13 @@
 import { Container } from "../Container/Container"
-import styles from "./Footer.module.scss"
 
 export function Footer() {
     const year = new Date().getFullYear();
     return (
-        <footer className={styles.footer}>
+        <footer className="footer">
             <Container>
-                <div className={styles.row}>
+                <div className="footer-row">
                     <div>© {year} Kamil Bozkurt</div>
-                    <div className={styles.muted}>Built with React + TypeScript</div>
+                    <div className="footer-muted">Built with React + TypeScript</div>
                 </div>
             </Container>
         </footer>

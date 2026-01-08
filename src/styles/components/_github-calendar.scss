@@ -1,0 +1,39 @@
+.github-block {
+  margin-top: 28px;
+}
+
+.github-block__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.github-block__title {
+  margin: 0;
+}
+
+.github-block__link {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--border);
+}
+
+.github-block__link:hover {
+  color: var(--text);
+}
+
+.github-block__card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 14px;
+  overflow-x: auto; /* important on small screens */
+}
+
+/* Small tweaks so the calendar doesn't feel cramped */
+.github-block__card svg {
+  max-width: 100%;
+}

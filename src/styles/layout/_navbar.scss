@@ -1,0 +1,38 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.navbar-brand a {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.navbar-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navbar-link:hover {
+  color: var(--text);
+  text-decoration: none;
+}

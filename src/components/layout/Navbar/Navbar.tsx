@@ -1,33 +1,32 @@
 import { NavLink } from "react-router-dom"
 import { Container } from "../Container/Container"
 import { ThemeToggle } from "../../theme/ThemeToggle/ThemeToggle.tsx"
-import styles from "./Navbar.module.scss"
 
 export function Navbar() {
     return (
-        <header className={styles.header}>
+        <header className="navbar">
             <Container>
-                <div className={styles.row}>
-                    <div className={styles.brand}>
+                <div className="navbar-row">
+                    <div className="navbar-brand">
                         <NavLink to="/">Kamil Bozkurt</NavLink>
                     </div>
-                    <nav className={styles.nav}>
-                        <NavLink className={styles.link} to="/about">
+                    <nav className="navbar-nav">
+                        <NavLink className="navbar-link" to="/about">
                             About
                         </NavLink>
-                        <NavLink className={styles.link} to="/projects">
+                        <NavLink className="navbar-link" to="/projects">
                             Projects
                         </NavLink>
-                        <NavLink className={styles.link} to="/resume">
+                        <NavLink className="navbar-link" to="/resume">
                             Resume
                         </NavLink>
-                        <NavLink className={styles.link} to="/skills">
+                        <NavLink className="navbar-link" to="/skills">
                             Skills
                         </NavLink>
-                        <NavLink className={styles.link} to="/book">
+                        <NavLink className="navbar-link" to="/book">
                             Book
                         </NavLink>
-                        <NavLink className={styles.link} to="/contact">
+                        <NavLink className="navbar-link" to="/contact">
                             Contact
                         </NavLink>
                     </nav>

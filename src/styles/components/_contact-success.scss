@@ -1,0 +1,31 @@
+.contact-success {
+  margin-top: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.contact-success__title {
+  margin: 0 0 8px 0;
+}
+
+.contact-success__text {
+  margin: 0 0 12px 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.contact-success__button {
+  display: inline-block;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.contact-success__button:hover {
+  filter: brightness(1.05);
+}

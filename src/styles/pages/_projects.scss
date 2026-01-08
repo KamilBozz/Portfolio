@@ -1,0 +1,23 @@
+.projects-page__lead {
+  color: var(--muted);
+  margin-top: 8px;
+  margin-bottom: 18px;
+}
+
+.projects-page__grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 720px) {
+  .projects-page__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-page__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

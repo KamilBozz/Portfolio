@@ -1,0 +1,46 @@
+.project-gallery {
+  display: grid;
+  gap: 12px;
+}
+
+.project-gallery__main {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.project-gallery__main img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-gallery__thumbs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.project-gallery__thumb-btn {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  width: 84px;
+  height: 54px;
+}
+
+.project-gallery__thumb-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-gallery__thumb-btn--active {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
