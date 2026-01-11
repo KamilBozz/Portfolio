@@ -7,8 +7,7 @@ function getInitialTheme(): Theme {
     const saved = localStorage.getItem("theme")
     if(saved === "light" || saved === "dark") return saved
 
-    const prefersLight = window.matchMedia?.("(prefers-color-scheme: light)").matches
-    return prefersLight ? "light" : "dark"
+    return "dark"
 }
 
 export function ThemeToggle() {

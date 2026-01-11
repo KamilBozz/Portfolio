@@ -3,15 +3,9 @@
   gap: 12px;
 }
 
-.project-gallery__main {
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--surface);
-  overflow: hidden;
-}
-
 .project-gallery__main img {
-  width: 100%;
+  border-radius: var(--radius);
+  width: auto;
   height: auto;
   display: block;
 }

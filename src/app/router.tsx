@@ -23,6 +23,7 @@ export const router = createBrowserRouter([
             { path: "/projects/:slug", element: <ProjectDetailPage /> },
             { path: "/book", element: <BookPage /> },
             { path: "/contact", element: <ContactPage />},
+            { path: "*", element: <NotFoundPage /> },
         ],
     },
 ]);

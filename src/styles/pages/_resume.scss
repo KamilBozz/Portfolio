@@ -80,11 +80,18 @@
 .resume-page__skills {
   display: grid;
   gap: 16px;
+  margin-bottom: 60px;
+
+  div {
+  h3 {
+    font-size: 16px;
+  }
+  }
 }
 
 @media (min-width: 860px) {
   .resume-page__skills {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -97,6 +104,14 @@
 /* reusable chip */
 .chip {
   font-size: 12px;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+.chip2 {
+  font-size: 14px;
   padding: 4px 8px;
   border: 1px solid var(--border);
   border-radius: 999px;

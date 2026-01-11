@@ -1,0 +1,102 @@
+.skills-page__lead {
+  margin-top: 8px;
+  margin-bottom: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 80ch;
+}
+
+.skills-page__legend {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.skills-badge {
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.skills-badge--comfortable {
+  border-color: rgba(124, 92, 255, 0.45);
+}
+
+.skills-badge--familiar {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.skills-badge--learning {
+  border-color: rgba(255, 255, 255, 0.14);
+  opacity: 0.85;
+}
+
+.skills-page__grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 860px) {
+  .skills-page__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.skills-card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+
+.skills-card__title {
+  margin: 0 0 12px 0;
+}
+
+.skills-card__chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* A chip that can include a small level tag */
+.skills-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.skills-chip__name {
+  color: var(--text);
+}
+
+.skills-chip__level {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.skills-chip__level--comfortable {
+  border-color: rgba(124, 92, 255, 0.45);
+}
+
+.skills-chip__level--familiar {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.skills-chip__level--learning {
+  border-color: rgba(255, 255, 255, 0.14);
+  opacity: 0.85;
+}

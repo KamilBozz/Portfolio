@@ -37,6 +37,110 @@ export function ResumePage() {
       </section>
 
       <section className="resume-page__section">
+        <h2>Skills</h2>
+        <div className="resume-page__skills">
+        <div>
+            <h3>Programming Languages</h3>
+            <div className="resume-page__chips">
+              {resumeData.skills.programmingLanguages.map((s) => (
+                <span key={s} className="chip2">
+                  {s}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3>Libraries & Frameworks</h3>
+            <div className="resume-page__chips">
+              {resumeData.skills.librariesAndFrameworks.map((s) => (
+                <span key={s} className="chip2">
+                  {s}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3>Databases & Tools</h3>
+            <div className="resume-page__chips">
+              {resumeData.skills.databasesAndTools.map((s) => (
+                <span key={s} className="chip2">
+                  {s}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3>APIs, Authentication & Backend Concepts</h3>
+            <div className="resume-page__chips">
+              {resumeData.skills.apisAndAuthentication.map((s) => (
+                <span key={s} className="chip2">
+                  {s}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3>Deployments, DevOps & Platforms</h3>
+            <div className="resume-page__chips">
+              {resumeData.skills.deploymentsDevopsPlatforms.map((s) => (
+                <span key={s} className="chip2">
+                  {s}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3>Designs & UI/UX Designs</h3>
+            <div className="resume-page__chips">
+              {resumeData.skills.designsUiUx.map((s) => (
+                <span key={s} className="chip2">
+                  {s}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3>Tools, Workflow & Collaboration</h3>
+            <div className="resume-page__chips">
+              {resumeData.skills.toolsWorkflowCollaboration.map((s) => (
+                <span key={s} className="chip2">
+                  {s}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3>Additional Technical & Business Knowledge</h3>
+            <div className="resume-page__chips">
+              {resumeData.skills.additionalTechnicalBusinessKnowledge.map((s) => (
+                <span key={s} className="chip2">
+                  {s}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3>Professional Skills</h3>
+            <div className="resume-page__chips">
+              {resumeData.skills.professionalSkills.map((s) => (
+                <span key={s} className="chip2">
+                  {s}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="resume-page__section">
         <h2>Experience</h2>
         <div className="resume-page__stack">
           {resumeData.experience.map((job) => (
@@ -68,55 +172,6 @@ export function ResumePage() {
               <div className="resume-page__muted">{ed.program}</div>
             </div>
           ))}
-        </div>
-      </section>
-
-      <section className="resume-page__section">
-        <h2>Skills</h2>
-        <div className="resume-page__skills">
-          <div>
-            <h3>Frontend</h3>
-            <div className="resume-page__chips">
-              {resumeData.skills.frontend.map((s) => (
-                <span key={s} className="chip">
-                  {s}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h3>Backend</h3>
-            <div className="resume-page__chips">
-              {resumeData.skills.backend.map((s) => (
-                <span key={s} className="chip">
-                  {s}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h3>Databases</h3>
-            <div className="resume-page__chips">
-              {resumeData.skills.databases.map((s) => (
-                <span key={s} className="chip">
-                  {s}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h3>Tools</h3>
-            <div className="resume-page__chips">
-              {resumeData.skills.tools.map((s) => (
-                <span key={s} className="chip">
-                  {s}
-                </span>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
     </Container>

@@ -24,6 +24,9 @@ export function ProjectDetailPage() {
         ← Back to Projects
       </Link>
 
+
+      <div className="project-detail__grid">
+        <section className="project-detail__left">
       <h1 className="project-detail__title">{project.title}</h1>
       <p className="project-detail__tagline">{project.tagline}</p>
 
@@ -39,9 +42,6 @@ export function ProjectDetailPage() {
           </a>
         ))}
       </div>
-
-      <div className="project-detail__grid">
-        <section className="project-detail__left">
           <h2>Overview</h2>
           <p className="project-detail__desc">{project.description}</p>
 

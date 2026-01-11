@@ -6,11 +6,12 @@ export const projects: Project[] = [
         slug: "jargon",
         tagline: "AI powered gamified learning PWA for industry terminology.",
         description: "A collaborative Progressive Web App that helps users learn industry-specific terms through quizzes, badges, and social features.",
-        tech: ["React", "TypeScript", "Tailwind CSS", "SASS/SCSS", "MySQL", "Prisma ORM", "Clerk", "Ngrok", "Hono"],
+        tech: ["TypeScript", "React", "Vite", "TanStack Query", "Tailwind CSS", "SASS/SCSS", "Radix UI", "MySQL", "Prisma ORM", "Clerk", "Ngrok", "Hono"],
         highlights: [
+            "Contributed to ~80% of the application, building core features including the Leaderboard, Friends system, User Profile, and major Home dashboard components in collaboration with cross-program designers.",
             "Built quiz flows and badge progression.",
             "Designed a clean UI with reusable components.",
-            "Worked in a team with Git + Jira workflow.",
+            "Worked in a team with Git + Jira workflow and Agile methodologies.",
         ],
         links: [
             { label: "GitHub", url: "https://github.com/Jargon-IDSP"},
@@ -30,6 +31,7 @@ export const projects: Project[] = [
 
         timeframe: "Sep 2025 - Dec 2025",
         role: "Full-Stack Developer",
+        featured: true,
     },
 
     {
@@ -45,7 +47,10 @@ export const projects: Project[] = [
             "Collaborated with UI/UX designers to match designs.",
         ],
 
-        links: [{ label: "GitHub", url: "https://github.com/IDSP-Project/MoneyMonstersV2" }],
+        links: [
+            { label: "GitHub", url: "https://github.com/IDSP-Project/MoneyMonstersV2" },
+            { label: "Live", url: "https://moneymonstersv2.onrender.com/" }
+        ],
         thumbnail: { 
             src: "/projects/moneymonsters/thumb.svg",
             alt: "MoneyMonsters project thumbnail",
@@ -59,5 +64,6 @@ export const projects: Project[] = [
 
         timeframe: "May 2025 - Jun 2025",
         role: "Full-Stack Developer",
+        featured: true,
     }
 ]

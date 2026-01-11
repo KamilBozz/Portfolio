@@ -32,4 +32,6 @@ export type Project = {
   video?: ProjectVideo; // optional
   timeframe?: string;
   role?: string;
+
+  featured?: boolean;
 };

@@ -1,0 +1,155 @@
+.about-hero {
+  display: grid;
+  gap: 18px;
+  align-items: center;
+  grid-template-columns: 1fr;
+  padding: 18px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+
+@media (min-width: 860px) {
+  .about-hero {
+    grid-template-columns: 160px 1fr;
+    padding: 22px;
+  }
+}
+
+.about-hero__avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  object-fit: cover;
+}
+
+.about-hero__title {
+  margin: 0;
+  font-size: 32px;
+}
+
+.about-hero__lead {
+  margin: 12px 0 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 75ch;
+}
+
+.about-hero__actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.about-facts {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 860px) {
+  .about-facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.about-fact {
+  border: 1px solid var(--border);
+  background: transparent;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.about-fact__label {
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.about-fact__value {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.about-section {
+  margin-top: 26px;
+}
+
+.about-section__title {
+  margin: 0 0 12px 0;
+}
+
+.about-story {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 14px;
+  color: var(--text);
+}
+
+.about-story p {
+  margin: 0;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.about-story p + p {
+  margin-top: 12px;
+}
+
+.about-highlights {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 860px) {
+  .about-highlights {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.about-card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+
+.about-card__title {
+  margin: 0 0 8px 0;
+}
+
+.about-card__text {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.about-cta {
+  margin-top: 30px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+
+.about-cta__title {
+  margin: 0 0 8px 0;
+}
+
+.about-cta__text {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.about-cta__actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
