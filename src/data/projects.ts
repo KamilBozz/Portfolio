@@ -25,7 +25,7 @@ export const projects: Project[] = [
 
         video: {
             provider: "youtube",
-            embedUrl: "https://www.youtube.com/embed/VIDEO_ID", // TODO: Replace with actual video ID
+            embedUrl: "https://www.youtube.com/embed/BBseq_63lvU", // TODO: Replace with actual video ID
             title: "Jargon demo video",
         },
 
