@@ -9,7 +9,7 @@ export function ResumePage() {
           <h1 className="resume-page__name">{resumeData.name}</h1>
           <p className="resume-page__title">{resumeData.title}</p>
           <p className="resume-page__meta">
-            {resumeData.location} • {resumeData.email}
+            {resumeData.location}
           </p>
         </div>
 
