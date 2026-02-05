@@ -13,16 +13,11 @@ export function ContactPage() {
       <h1>Contact</h1>
 
       <p className="contact-page__lead">
-        Want to connect? Email me or message me on LinkedIn. If you want to meet, please use the{" "}
+        Want to connect? Message me on LinkedIn. If you want to meet, please use the{" "}
         <a href="/book">Book a Meeting</a> page.
       </p>
 
       <div className="contact-page__grid">
-        <a className="contact-card" href={`mailto:${social.email}`}>
-          <div className="contact-card__title">Email</div>
-          <div className="contact-card__value">{social.email}</div>
-          <div className="contact-card__hint">Click to open your email app</div>
-        </a>
 
         <a className="contact-card" href={social.linkedin} target="_blank" rel="noreferrer">
           <div className="contact-card__title">LinkedIn</div>
@@ -80,11 +75,6 @@ export function ContactPage() {
             </button>
           </form>
         )}
-
-        <p className="contact-page__muted contact-page__small">
-          Prefer not to use the form? Email me directly:{" "}
-          <a href={`mailto:${social.email}`}>{social.email}</a>
-        </p>
       </section>
     </Container>
   );

@@ -19,24 +19,20 @@ export function AboutPage() {
           <h1 className="about-hero__title">About Me</h1>
 
           <p className="about-hero__lead">
-          I’m Kamil, a Full Stack Web Developer. I enjoy building clean, reliable web apps and focusing on UI details that make a product feel professional.
+          I'm Kamil, a Full Stack Web Developer and BCIT FSWD grad. I build web apps with TypeScript, React, and modern backend tools, and I care about clean code and UI details that make a product feel solid. Have a look at my projects or get in touch if you'd like to connect.
           </p>
 
           <div className="about-facts">
-            {/* <div className="about-fact">
-              <div className="about-fact__label">Location</div>
-              <div className="about-fact__value">White Rock, BC - Canada</div>
-            </div> */}
 
             <div className="about-fact">
               <div className="about-fact__label">Focus</div>
               <div className="about-fact__value">TypeScript • JavaScript • React • Node</div>
             </div>
 
-            <div className="about-fact">
+            {/* <div className="about-fact">
               <div className="about-fact__label">Goal</div>
               <div className="about-fact__value">Internship / Junior dev role</div>
-            </div>
+            </div> */}
           </div>
 
           <div className="about-hero__actions">

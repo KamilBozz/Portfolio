@@ -3,11 +3,90 @@
   gap: 12px;
 }
 
+.project-gallery__main {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  border-radius: var(--radius);
+}
+
 .project-gallery__main img {
   border-radius: var(--radius);
   width: auto;
   height: auto;
   display: block;
+}
+
+// Modal (lightbox)
+.project-gallery__modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.project-gallery__modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-gallery__modal-img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: var(--radius);
+}
+
+.project-gallery__modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: var(--radius);
+}
+
+.project-gallery__modal-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.project-gallery__modal-prev,
+.project-gallery__modal-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+  cursor: pointer;
+  padding: 12px;
+  border-radius: var(--radius);
+}
+
+.project-gallery__modal-prev:hover,
+.project-gallery__modal-next:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.project-gallery__modal-prev {
+  left: 16px;
+}
+
+.project-gallery__modal-next {
+  right: 16px;
 }
 
 .project-gallery__thumbs {

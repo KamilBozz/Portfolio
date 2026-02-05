@@ -2,7 +2,6 @@ export const resumeData = {
   name: "Kamil Bozkurt",
   title: "Full Stack Web Developer",
   location: "Vancouver, BC - Canada",
-  email: "kamillboz@gmail.com",
   links: {
     github: "https://github.com/KamilBozz",
     linkedin: "https://www.linkedin.com/in/kamil-bozkurt",
