@@ -13,15 +13,14 @@ export function SkillsPage() {
 
       <h1>Skills</h1>
       <p className="skills-page__lead">
-        A quick overview of the tools and technologies I use most often. (Levels are just for
-        clarity and can change as I learn.)
+        A quick overview of the tools and technologies I use most often.
       </p>
 
-      <div className="skills-page__legend">
+      {/* <div className="skills-page__legend">
         <span className="skills-badge skills-badge--comfortable">Comfortable</span>
         <span className="skills-badge skills-badge--familiar">Familiar</span>
         <span className="skills-badge skills-badge--learning">Learning</span>
-      </div>
+      </div> */}
 
       <div className="skills-page__grid">
         {skillCategories.map((cat) => (
@@ -33,7 +32,7 @@ export function SkillsPage() {
                 <span key={item.name} className="skills-chip">
                   <span className="skills-chip__name">{item.name}</span>
 
-                  {item.level && (
+                  {/* {item.level && (
                     <span
                       className={
                         item.level === "Comfortable"
@@ -45,7 +44,7 @@ export function SkillsPage() {
                     >
                       {item.level}
                     </span>
-                  )}
+                  )} */}
                 </span>
               ))}
             </div>
