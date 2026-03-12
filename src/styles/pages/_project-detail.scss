@@ -36,6 +36,7 @@
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  margin-bottom: 3rem;
 }
 
 .project-detail__links a {
@@ -57,6 +58,177 @@
   grid-template-columns: 1fr;
 }
 
+.project-detail__caseStudy {
+  margin-top: 22px;
+  display: grid;
+  gap: 4rem;
+}
+
+.caseStudySection {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.caseStudySection__text {
+  min-width: 0;
+  align-content: center;
+  order: 1;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.caseStudySection__media {
+  min-width: 0;
+  order: 2;
+}
+
+.caseStudySubheading {
+  margin-top: 22px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.personaGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+@media (min-width: 760px) {
+  .personaGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.personaCard {
+  display: grid;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: 12px;
+}
+
+.personaCard:hover {
+  filter: brightness(1.05);
+}
+
+.personaCard:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius);
+}
+
+.personaCard__thumb {
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) - 2px);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  aspect-ratio: 16 / 10;
+}
+
+.personaCard__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.personaCard__thumbPlaceholder {
+  width: 100%;
+  height: 100%;
+}
+
+.personaCard__title {
+  font-weight: 600;
+}
+
+.caseStudyImageButton {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+}
+
+.caseStudyImageButton:hover .caseStudyImage {
+  filter: brightness(1.03);
+}
+
+.caseStudyImageButton:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius);
+}
+
+.caseStudyImage {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  object-fit: cover;
+  align-self: center;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 760px) {
+  .caseStudySection {
+    display: flex;
+    gap: 3rem;
+    align-items: stretch;
+  }
+
+  .caseStudySection--full {
+    display: block;
+  }
+
+  .caseStudySection--reverse {
+    flex-direction: row-reverse;
+  }
+
+  .caseStudySection__text {
+    flex: 1 1 0;
+    order: 1;
+  }
+
+  .caseStudySection__media {
+    flex: 0 0 auto;
+    align-self: stretch;
+    display: flex;
+    justify-content: flex-end;
+    order: 2;
+  }
+
+  .caseStudySection--mediaFirst .caseStudySection__media {
+    order: 1;
+  }
+
+  .caseStudySection--mediaFirst .caseStudySection__text {
+    order: 2;
+  }
+
+  .caseStudyImage {
+    height: 500px;
+    width: auto;
+    max-width: min(520px, 42vw);
+    max-height: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 @media (min-width: 980px) {
   .project-detail__grid {
     grid-template-columns: 1.2fr 0.8fr;
@@ -66,6 +238,14 @@
 
 .project-detail__desc {
   line-height: 1.7;
+}
+
+.project-detail__key-features {
+  ul {
+    li {
+      margin-top: 1rem;
+    }
+  }
 }
 
 .project-detail__list {
@@ -87,6 +267,47 @@
   color: var(--muted);
 }
 
+.codeBlock {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 13px;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.namingTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  margin-bottom: 18px;
+  font-size: 13px;
+}
+
+.namingTable th,
+.namingTable td {
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.namingTable thead th {
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.namingTable code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  font-size: 12px;
+}
+
 .project-detail__video {
   margin-top: 10px;
   border: 1px solid var(--border);
@@ -104,5 +325,137 @@
 @media (min-width: 980px) {
   .project-detail__video iframe {
     height: 360px;
+  }
+}
+
+.project-detail__video--large iframe {
+  height: 450px;
+}
+
+@media (min-width: 760px) {
+  .project-detail__video--large iframe {
+    height: 560px;
+  }
+}
+
+.project-detail__figma {
+  margin-top: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  color: black;
+}
+
+.screens-image {
+  margin-top: 14px;
+  overflow: hidden;
+}
+
+.screens-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-detail__figma iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+  display: block;
+}
+
+@media (min-width: 760px) {
+  .project-detail__figma iframe {
+    height: 560px;
+  }
+}
+
+.booth-gallery {
+  margin-top: .5rem;
+  display: grid;
+  gap: 14px;
+}
+
+.booth-gallery__main-wrap {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.booth-gallery__main {
+  display: block;
+  width: 100%;
+}
+
+.booth-gallery__main img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: top;
+}
+
+.booth-gallery__prev,
+.booth-gallery__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--text);
+  cursor: pointer;
+  padding: 12px;
+  border-radius: var(--radius);
+}
+
+.booth-gallery__prev:hover,
+.booth-gallery__next:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.booth-gallery__prev {
+  left: 12px;
+}
+
+.booth-gallery__next {
+  right: 12px;
+}
+
+.booth-gallery__thumbs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.booth-gallery__thumb-btn {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  width: 72px;
+  height: 48px;
+}
+
+.booth-gallery__thumb-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.booth-gallery__thumb-btn--active {
+  outline: 2px solid orange;
+  outline-offset: 2px;
+}
+
+.booth-text {
+  .project-detail__desc {
+    margin-top: 3rem;
+    margin-bottom: 0;
   }
 }
