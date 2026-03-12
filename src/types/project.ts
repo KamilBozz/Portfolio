@@ -75,7 +75,7 @@ export type Project = {
   slug: string; // route: /projects/:slug
 
   tagline: string; // short for cards
-  description: string; // longer for detail page
+  description: string | string[]; // longer for detail page (supports multi-paragraph)
 
   tech: string[];
   highlights: string[];

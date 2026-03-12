@@ -152,6 +152,52 @@ export const projects: Project[] = [
     },
 
     {
+        title: "Strata Reserve Planning Depreciation Portal",
+        slug: "strata-reserve-planning-depreciation-portal",
+        tagline: "A multi-role property management platform for strata reserve planning and depreciation reporting.",
+        description: [
+            "Strata Reserve Planning needed a secure way to manage the full depreciation report workflow in one place—without juggling spreadsheets, email threads, and disconnected tools. The SRP Depreciation Portal was built to centralize client onboarding, surveys, document requests, inspection scheduling, and draft-meeting coordination into a single, trackable process.",
+            "The app includes four tiers of users—Admin, Assistant, Inspector, and Strata Client—each with a tailored experience and access level. Because the portal handles confidential strata documentation and planning data, it is built as an internal, access-controlled platform, not a public application.",
+        ],
+
+        tech: ["React", "TypeScript", "Hono", "Prisma", "SCSS/SASS", "PostgreSQL", "Supabase", "Dropbox"],
+        highlights: [
+            "Designed end-to-end user flows for four roles (Admin, Assistant, Inspector, Strata Client), mapping intake, document submission, review gates, scheduling, and follow-up steps into a clear workflow.",
+            "Built role-based navigation and dashboards in React + TypeScript, ensuring each user tier sees the correct pages, actions, and status-based locks.",
+            "Implemented in-app calendar scheduling for inspections/meetings, including availability slots and workflow rules that unlock scheduling only after required approvals.",
+            "Created a consistent UI styling system with SCSS/SASS, setting up reusable layout patterns and styling foundations used across multiple screens.",
+            "Integrated backend workflows using Hono + Prisma + PostgreSQL (Supabase), supporting role permissions, progress states, and structured form/survey data.",
+            "Connected document handling to Dropbox for organized file storage and archiving, supporting version-friendly upload/replace behavior after submission.",
+        ],
+
+        links: [
+            { label: "GitHub", url: "https://github.com/orgs/IDSP-Strata-Reserve-Planning/repositories" },
+            // { label: "Live App", url: "https://moneymonstersv2.onrender.com/" }
+        ],
+        thumbnail: { 
+            src: "/projects/strata-reserve-planning/thumb.svg",
+            alt: "Strata Reserve Planning Depreciation Portal project thumbnail",
+        },
+        gallery: [
+            { src: "/projects/strata-reserve-planning/1.png", alt: "Strata Reserve Planning Depreciation Portal screenshot 1" },
+            { src: "/projects/strata-reserve-planning/2.png", alt: "Strata Reserve Planning Depreciation Portal screenshot 2" },
+            { src: "/projects/strata-reserve-planning/3.png", alt: "Strata Reserve Planning Depreciation Portal screenshot 3" },
+            { src: "/projects/strata-reserve-planning/4.png", alt: "Strata Reserve Planning Depreciation Portal screenshot 4" },
+            { src: "/projects/strata-reserve-planning/5.png", alt: "Strata Reserve Planning Depreciation Portal screenshot 5" },
+        ],
+
+        video: {
+            provider: "vimeo",
+            embedUrl: "https://player.vimeo.com/video/1172342877?h=0ec0c7522a",
+            title: "Strata Reserve Planning Depreciation Portal demo video",
+        },
+
+        timeframe: "Jan 2026 - Apr 2026",
+        role: "Full-Stack Developer",
+        featured: true,
+    },
+
+    {
         title: "MoneyMonsters",
         slug: "moneymonsters",
         tagline: "Budgeting app for parents & kids with tasks, rewards, and goals.",

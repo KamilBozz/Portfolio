@@ -47,7 +47,7 @@ export const resumeData = {
     {
       school: "Full Stack Web Development Diploma",
       program: "British Columbia Institute of Technology (BCIT)",
-      dates: "Sep 2024 – May 2026 (expected)",
+      dates: "Sep 2024 – April 2026",
     },
     {
       school: "Computer Engineering (Incomplete)",

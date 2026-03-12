@@ -681,7 +681,15 @@ export function ProjectDetailPage() {
               ))}
             </div>
             <h2>Overview</h2>
-            <p className="project-detail__desc">{project.description}</p>
+            {Array.isArray(project.description) ? (
+              project.description.map((p) => (
+                <p key={p} className="project-detail__desc">
+                  {p}
+                </p>
+              ))
+            ) : (
+              <p className="project-detail__desc">{project.description}</p>
+            )}
 
             <h2>Highlights</h2>
             <ul className="project-detail__list">

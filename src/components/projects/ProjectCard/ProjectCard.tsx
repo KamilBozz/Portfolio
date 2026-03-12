@@ -6,6 +6,8 @@ type Props = {
 };
 
 export function ProjectCard({ project }: Props) {
+  const isCaseStudy = project.slug === "jargon" || !!project.caseStudy;
+
   return (
     <Link to={`/projects/${project.slug}`} className="project-card">
       <div className="project-card__thumb-wrap">
@@ -17,7 +19,10 @@ export function ProjectCard({ project }: Props) {
       </div>
 
       <div className="project-card__body">
-        <h3 className="project-card__title">{project.title}</h3>
+        <div className="project-card__title-row">
+          <h3 className="project-card__title">{project.title}</h3>
+          {isCaseStudy && <span className="project-card__badge">Case Study</span>}
+        </div>
         <p className="project-card__tagline">{project.tagline}</p>
 
         <div className="project-card__tech-row">
