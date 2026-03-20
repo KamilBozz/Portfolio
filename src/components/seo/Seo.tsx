@@ -7,7 +7,7 @@ type Props = {
   const SITE_NAME = "Kamil Bozkurt";
   const BASE_URL = "https://YOUR_DOMAIN_HERE"; // your Vercel domain
   const DEFAULT_DESC =
-    "Full Stack Web Development graduated from BCIT. Projects with TypeScript, React, Node, and databases.";
+    "Full-Stack Web Development graduated from BCIT. Projects with TypeScript, React, Node, and databases.";
   
   export function Seo({ title, description, path = "/" }: Props) {
     const fullTitle = `${title} • ${SITE_NAME}`;

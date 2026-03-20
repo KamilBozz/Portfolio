@@ -19,7 +19,7 @@ export function AboutPage() {
           <h1 className="about-hero__title">About Me</h1>
 
           <p className="about-hero__lead">
-          I'm Kamil, a Full Stack Web Developer and BCIT FSWD grad. I build web apps with TypeScript, React, and modern backend tools, and I care about clean code and UI details that make a product feel solid. Have a look at my projects or get in touch if you'd like to connect.
+          I'm Kamil, a Full-Stack Web Developer and BCIT FSWD grad. I build web apps with TypeScript, React, and modern backend tools, and I care about clean code and UI details that make a product feel solid. Have a look at my projects or get in touch if you'd like to connect.
           </p>
 
           <div className="about-facts">
@@ -55,7 +55,7 @@ export function AboutPage() {
 
         <div className="about-story">
           <p>
-          I started with a strong interest in technology and problem-solving, and I’ve been building that foundation through BCIT’s Full Stack Web Development program.
+          I started with a strong interest in technology and problem-solving, and I’ve been building that foundation through BCIT’s Full-Stack Web Development program.
           </p>
           <p>
           I enjoy turning ideas into real products—especially projects that have clear structure, good UX, and clean code. I prefer simple, understandable solutions over unnecessary complexity.

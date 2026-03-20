@@ -1,7 +1,27 @@
+import type { MouseEvent } from "react";
 import { Container } from "../../components/layout/Container/Container";
 import { resumeData } from "../../data/resume";
 
 export function ResumePage() {
+  const handleResumeDownload = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+
+    const fileUrl = "/resume/Kamil-Bozkurt-Resume.pdf";
+    const fileName = "Kamil-Bozkurt-Resume.pdf";
+
+    // Open the PDF in a new tab
+    window.open(fileUrl, "_blank", "noopener,noreferrer");
+
+    // Trigger download explicitly
+    const downloadLink = document.createElement("a");
+    downloadLink.href = fileUrl;
+    downloadLink.download = fileName;
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  };
+
   return (
     <Container>
       <div className="resume-page__top">
@@ -14,7 +34,11 @@ export function ResumePage() {
         </div>
 
         <div className="resume-page__buttons">
-          <a className="resume-page__btn" href="/resume/Kamil-Bozkurt-Resume.pdf" download>
+          <a
+            className="resume-page__btn"
+            href="/resume/Kamil-Bozkurt-Resume.pdf"
+            onClick={handleResumeDownload}
+          >
             Download PDF
           </a>
           <a

@@ -24,7 +24,7 @@ export function HomePage() {
 
         <div className="home-her__content">
           <h1 className="home-hero__title">Kamil Bozkurt</h1>
-          <p className="home-hero__subtitle">Full Stack Web Developer • BCIT FSWD</p>
+          <p className="home-hero__subtitle">Full-Stack Web Developer • BCIT FSWD</p>
 
           <p className="home-hero__lead">
             I build clean, reliable web apps with TypeScript, React, and modern backend tools.

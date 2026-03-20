@@ -1,6 +1,6 @@
 export const resumeData = {
   name: "Kamil Bozkurt",
-  title: "Full Stack Web Developer",
+  title: "Full-Stack Web Developer",
   location: "Vancouver, BC - Canada",
   links: {
     github: "https://github.com/KamilBozz",
@@ -8,12 +8,24 @@ export const resumeData = {
   },
 
   summary: [
-    "Full Stack Web Developer student at BCIT (expected graduation: May 2026).",
+    "Full-Stack Web Developer student at BCIT (expected graduation: May 2026).",
     "Strong foundation in TypeScript, React, Node/Express, and databases.",
     "Interested in building clean, reliable web apps with a strong UI focus.",
   ],
 
   experience: [
+    {
+      company: "Full-Stack Developer Intern",
+      location: "Strata Reserve Planning - Vancouver, BC",
+      dates: "Jan 2026 – Present",
+      bullets: [
+        "Built a role-based web portal for strata reserve planning supporting 4 user types (Admin, Assistant, Inspector, Client).",
+        "Designed user flows and core UI for intake, documents, reviews, and scheduling.",
+        "Developed frontend using React and TypeScript with reusable components and role-based navigation.",
+        "Implemented scheduling features and workflow-based page access control.",
+        "Contributed to backend using Hono, Prisma, and PostgreSQL (Supabase), including document handling with Dropbox.",
+      ],
+    },
     {
       company: "Warehouse Manager",
       location: "Discount Carpet & Flooring - Richmond, BC",
@@ -45,7 +57,7 @@ export const resumeData = {
 
   education: [
     {
-      school: "Full Stack Web Development Diploma",
+      school: "Full-Stack Web Development Diploma",
       program: "British Columbia Institute of Technology (BCIT)",
       dates: "Sep 2024 – April 2026",
     },
