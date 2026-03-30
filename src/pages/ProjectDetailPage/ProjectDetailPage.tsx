@@ -267,9 +267,55 @@ export function ProjectDetailPage() {
                     </div>
                   </>
                 )}
+
               </div>
             </section>
           )}
+
+          {project.caseStudy!.development?.subsections?.length ? (
+            <section className="caseStudySection caseStudySection--full">
+              <div className="caseStudySection__text">
+                <h2>{project.caseStudy!.development.heading}</h2>
+                <div className="developmentInsights">
+                  {project.caseStudy!.development.subsections.map((subsection, index) => (
+                    <div
+                      key={subsection.heading}
+                      className={`developmentSubsection ${index > 0 ? "developmentSubsection--withDivider" : ""}`}
+                    >
+                      <h3 className="caseStudySubheading">{subsection.heading}</h3>
+                      <div className="developmentSubsection__insights">
+                        {subsection.insights.map((insight, index) => (
+                          <div
+                            key={`${insight.image.src}-${index}`}
+                            className={`caseStudySection ${index % 2 === 1 ? "caseStudySection--mediaFirst" : ""}`}
+                          >
+                            <div className="caseStudySection__text">
+                              <p className="project-detail__desc">{insight.body}</p>
+                            </div>
+                            <div className="caseStudySection__media">
+                              <button
+                                type="button"
+                                className="caseStudyImageButton"
+                                onClick={() => setLightboxImage(insight.image)}
+                                aria-label="View full size"
+                              >
+                                <img
+                                  className="caseStudyImage"
+                                  src={insight.image.src}
+                                  alt={insight.image.alt}
+                                  loading="lazy"
+                                />
+                              </button>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          ) : null}
 
           <section className="caseStudySection caseStudySection--full">
             <div className="caseStudySection__text">

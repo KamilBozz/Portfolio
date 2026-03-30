@@ -50,6 +50,16 @@ export type ProjectCaseStudy = {
     // Figma embed URL for user flow. Only shown when set.
     userFlowEmbedUrl?: string;
   };
+  development?: {
+    heading: string;
+    subsections: {
+      heading: string;
+      insights: {
+        body: string;
+        image: ProjectImage;
+      }[];
+    }[];
+  };
   // Figma embed URL (Share → Embed in Figma). Only shown when set.
   figmaEmbedUrl?: string;
   marketingPromotion?: {

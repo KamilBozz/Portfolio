@@ -110,6 +110,62 @@ export const projects: Project[] = [
                 ],
                 userFlowEmbedUrl: "https://embed.figma.com/design/EwNmZzET5XaZsHIzj6G7mt/Jargon-UserFlow?node-id=0-1&embed-host=share",
             },
+            development: {
+                heading: "Development",
+                subsections: [
+                    {
+                        heading: "Leaderboard",
+                        insights: [
+                            {
+                                body: "I implemented a dedicated React Query hook to load leaderboard data based on context (general or friends). The hook dynamically switches endpoints and only attaches a Clerk bearer token for the friends view, which keeps public ranking lightweight while protecting private data. I also configured query keys and cache timing so leaderboard views feel responsive without unnecessary refetching.",
+                                image: { src: "/projects/jargon/use-leaderboard.png", alt: "React Query hook for loading leaderboard data by context" },
+                            },
+                            {
+                                body: "This controller is the global leaderboard backend endpoint. It fetches user records with the fields needed by the UI (identity, score, language, avatar config), orders users by score descending, and returns a consistent JSON payload. This ensures ranking is computed server-side and stays authoritative across clients.",
+                                image: { src: "/projects/jargon/getLeaderboard.png", alt: "Backend getLeaderboard controller returning ranked users" },
+                            },
+                            {
+                                body: "This screen shows the final leaderboard experience powered by the frontend hook and backend ranking endpoint. Users can see their position in a clear, gamified layout that combines score progression with profile/identity visuals. The UI demonstrates how API data is translated into an engaging, easy-to-scan competitive learning view.",
+                                image: { src: "/projects/jargon/leaderboard-app.png", alt: "Final leaderboard UI in the Jargon app" },
+                            },
+                        ],
+                    },
+                    {
+                        heading: "Database Seeding",
+                        insights: [
+                            {
+                                body: "This screen is the learner-facing result of the seeding pipeline: a flashcard from the prebuilt “General” library, showing the term Plumb Bob and its English definition-the same concept that exists as structured JSON in our content files. Progress (“Card 5 of 10”), category badge, and flip interaction show how static data becomes an interactive study flow after it’s stored and served by the backend.",
+                                image: { src: "/projects/jargon/flashcard-app.png", alt: "Jargon flashcard app screen for Plumb Bob" },
+                            },
+                            {
+                                body: "Each flashcard is authored as a single JSON object: stable id, nested term and definition maps for seven languages, plus industry_id and level_id for filtering and progression. This example matches the card shown in the app for English, proving the pipeline from file -> database -> API -> UI. The other locales stay available for language preferences without separate decks per language.",
+                                image: { src: "/projects/jargon/general-words-json.png", alt: "General words JSON structure for seeded flashcards" },
+                            },
+                            {
+                                body: "The seeder loads levels.json, industries.json, and every industry *words*.json, then validates data before touching the database: cards must have a level_id, IDs must be unique, and foreign keys must point at real levels and industries. If anything is wrong, the script exits with a clear error so we never silently import broken rows-important when the content library is large and edited by multiple people.",
+                                image: { src: "/projects/jargon/flashcard-seeder.png", alt: "Flashcard seeder validation logic" },
+                            },
+                            {
+                                body: "Content authors work with nested objects (term.english, definition.korean, ...). The transformer flattens those into columns that match our Prisma schema (termEnglish, definitionFrench, ...) and renames metadata to camelCase (industryId, levelId). That separation keeps JSON ergonomic for writing and translating while the database stays easy to query and index.",
+                                image: { src: "/projects/jargon/transformForDb.png", alt: "transformForDb mapping from JSON shape to Prisma columns" },
+                            },
+                        ],
+                    },
+                    {
+                        heading: "Clerk + Ngrok implementation",
+                        insights: [
+                            {
+                                body: "This route exposes a focused backend endpoint for Clerk events (POST /clerk under the webhook router). In development, Ngrok tunnels this local endpoint so Clerk can deliver real-time user lifecycle events (created/updated/deleted) to my local server. Keeping webhook routing isolated made auth integration easier to test and safer to evolve without touching feature routes.",
+                                image: { src: "/projects/jargon/webhook-route.png", alt: "Webhook route for Clerk events in Hono backend" },
+                            },
+                            {
+                                body: "After authentication, I sync Clerk identity data into MySQL: first checking for a valid primary email, then updating existing users or creating missing users with default app fields (like initial score). This ensures every authenticated session maps to a reliable internal user row, which is required by leaderboard, profile, and friends features. The flow is idempotent in practice: repeated requests keep user data fresh instead of creating duplicates.",
+                                image: { src: "/projects/jargon/auth-middleware.png", alt: "Sync logic for Clerk user data into MySQL" },
+                            },
+                        ],
+                    },
+                ],
+            },
             figmaEmbedUrl: "https://embed.figma.com/design/rBUiQnUt7nza4K8woaQYyB/Untitled?node-id=0-1&embed-host=share",
             marketingPromotion: {
                 heading: "Marketing, Promotion",
