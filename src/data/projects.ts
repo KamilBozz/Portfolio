@@ -331,4 +331,44 @@ export const projects: Project[] = [
         role: "Co-author & Lead",
         featured: true,
     },
+
+    {
+        title: "Kicnic",
+        slug: "kicnic",
+        tagline: "Real-time picnic planning app with voting, weather insights, and live updates.",
+        description: "Planning group events usually gets messy in chats, with availability updates getting lost and no single source of truth. Kicnic solves this by centralizing date voting into one web app where users can sign up/login, vote yes/no per day, and see weather forecasts for each date. I built the app end-to-end with a Node.js + Express backend and a vanilla JavaScript frontend, and added WebSockets so vote changes appear instantly for everyone connected.",
+
+        tech: ["JavaScript (Vanilla)", "Node.js", "Express.js", "WebSocket (ws)", "HTML5", "CSS3", "cookie-session", "OpenWeatherMap API"],
+        highlights: [
+            "Built the full project end-to-end, including frontend UI flows, backend API design, and state refresh logic.",
+        "Implemented authentication (signup, login, logout, session check) using cookie-based sessions.",
+        "Developed voting APIs and interactive day cards that let users set, change, or clear availability.",
+        "Integrated WebSockets for instant vote synchronization so all connected users see updates in real time.",
+        "Connected weather forecasts to each date card and added client-side caching to reduce repeated API calls.",
+        "Added a soft refresh control and resilient data fetching for session, votes, and weather state.",
+        ],
+
+        links: [
+            { label: "GitHub", url: "https://github.com/KamilBozz/Kicnic" },
+            { label: "Live App", url: "https://kicnic.onrender.com/" },
+        ],
+        thumbnail: {
+            src: "/projects/kicnic/thumb.png",
+            alt: "Kicnic thumbnail",
+        },
+        gallery: [
+            { src: "/projects/kicnic/1.png", alt: "Kicnic screenshot 1" },
+            { src: "/projects/kicnic/2.png", alt: "Kicnic screenshot 2" },
+        ],
+
+        video: {
+            provider: "youtube",
+            embedUrl: "https://youtube.com/embed/dA-8lyKl99k", // TODO: Replace with actual video ID
+            title: "Kicnic demo video",
+        },
+
+        timeframe: "Feb 2025 - Apr 2025",
+        role: "Full-Stack Developer",
+        featured: false,
+    },
 ]
