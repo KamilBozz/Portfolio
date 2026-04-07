@@ -8,9 +8,7 @@ export const resumeData = {
   },
 
   summary: [
-    "Full-Stack Web Developer student at BCIT (expected graduation: May 2026).",
-    "Strong foundation in TypeScript, React, Node/Express, and databases.",
-    "Interested in building clean, reliable web apps with a strong UI focus.",
+    "Full-Stack Developer with hands-on experience building web applications using React, TypeScript, Node.js, and modern database tools. Experienced in both frontend and backend development, including authentication, REST APIs, and responsive UI design. Contributed to major school and internship projects, built core product features, and worked with cross-functional teams. Strong problem-solving skills, attention to detail, and ability to work independently in fast-paced environments.",
   ],
 
   experience: [
@@ -70,13 +68,13 @@ export const resumeData = {
 
   skills: {
     programmingLanguages: ["Node.js", "JavaScript", "TypeScript", "C#", "PHP", ".NET", "HTML", "CSS", "OOP (Object-Oriented Programming)"],
-    librariesAndFrameworks: ["Express.js", "React", "Next.js", "JQuery", "Tailwind CSS", "SASS", "EJS", "Hono"],
-    databasesAndTools: ["MySQL", "PostgreSQL", "MongoDB", "Prisma ORM", "Neon"],
+    librariesAndFrameworks: ["React", "Next.js", "Express.js", "Bootstrap", "Blazor", "JQuery", "Tailwind CSS", "SCSS/SASS", "Laravel", "EJS", "Hono"],
+    databasesAndTools: ["SQL", "MySQL", "PostgreSQL", "NoSQL", "MongoDB", "Prisma ORM", "Neon", "PowerShell", "Ubuntu"],
     apisAndAuthentication: ["REST APIs", "OAuth", "Auth0", "Clerk", "DOM"],
-    deploymentsDevopsPlatforms: ["Vercel", "Render", "Ngrok", "Aiven", "CI/CD", "Virtual Machines (VM)"],
+    deploymentsDevopsPlatforms: ["AWS", "Vercel", "Supabase", "Microsoft Azure", "Render", "Ngrok", "Razor", "Aiven", "Postman", "CI/CD", "Virtual Machines (VM)"],
     designsUiUx: ["Figma", "Adobe Photoshop", "Adobe Illustrator", "UI/UX Design Principles"],
     toolsWorkflowCollaboration: ["GitHub", "Agile Methodologies", "Scrum", "Jira", "Trello", "Slack"],
-    additionalTechnicalBusinessKnowledge: ["Digital Marketing", "SEO", "E-commerce", "IT Law"],
+    additionalTechnicalBusinessKnowledge: ["Digital Marketing", "SEO", "A/B Testing", "E-commerce", "IT Law"],
     professionalSkills: ["Problem Solving", "Time Management", "Attention to Detail", "Working Independently", "Responsibility & Reliability", "Communication & Collaboration"],
   },
 };
