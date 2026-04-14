@@ -51,6 +51,47 @@
   filter: brightness(1.05);
 }
 
+.project-detail__demo-access {
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  // background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.project-detail__demo-access-list {
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.project-detail__demo-access-item {
+  display: grid;
+  gap: 0.3rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) - 2px);
+  background: var(--surface);
+
+  dt {
+    font-size: 0.875rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  dd {
+    margin: 0;
+    font-weight: 600;
+    word-break: break-word;
+  }
+}
+
 .project-detail__grid {
   margin-top: 22px;
   display: grid;
@@ -297,6 +338,10 @@
   .project-detail__grid {
     grid-template-columns: 1.2fr 0.8fr;
     align-items: start;
+  }
+
+  .project-detail__demo-access-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

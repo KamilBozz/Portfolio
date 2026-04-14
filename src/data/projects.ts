@@ -203,7 +203,7 @@ export const projects: Project[] = [
         },
 
         timeframe: "Sep 2025 - Dec 2025",
-        role: "Full-Stack Developer",
+        role: "Full-Stack Developer Intern",
         featured: true,
     },
 
@@ -227,8 +227,9 @@ export const projects: Project[] = [
         ],
 
         links: [
-            { label: "GitHub", url: "https://github.com/orgs/IDSP-Strata-Reserve-Planning/repositories" },
-            // { label: "Live App", url: "https://moneymonstersv2.onrender.com/" }
+            { label: "GitHub Frontend", url: "https://github.com/BuiltByRobyn/strata-reserve-frontend" },
+            { label: "GitHub Backend", url: "https://github.com/BuiltByRobyn/strata-reserve-backend" },
+            { label: "Live App", url: "https://srp.builtbyrobyn.com/dashboard"}
         ],
         thumbnail: { 
             src: "/projects/strata-reserve-planning/thumb.svg",
@@ -246,6 +247,14 @@ export const projects: Project[] = [
             provider: "vimeo",
             embedUrl: "https://player.vimeo.com/video/1172342877?h=0ec0c7522a",
             title: "Strata Reserve Planning Depreciation Portal demo video",
+        },
+
+        demoAccess: {
+            heading: "Demo Access",
+            note: "Use the demo accounts below to explore the portal with preconfigured access.",
+            clientEmail: "client@client.com",
+            adminEmail: "admin@admin.com",
+            password: "Test1234!",
         },
 
         timeframe: "Jan 2026 - Apr 2026",

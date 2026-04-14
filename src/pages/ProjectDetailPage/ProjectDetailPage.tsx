@@ -726,6 +726,29 @@ export function ProjectDetailPage() {
                 </a>
               ))}
             </div>
+
+            {project.demoAccess ? (
+              <section className="project-detail__demo-access" aria-labelledby="demo-access-heading">
+                <h2 id="demo-access-heading">{project.demoAccess.heading}</h2>
+                {project.demoAccess.note && <p className="project-detail__desc">{project.demoAccess.note}</p>}
+
+                <dl className="project-detail__demo-access-list">
+                  <div className="project-detail__demo-access-item">
+                    <dt>Client email</dt>
+                    <dd>{project.demoAccess.clientEmail ?? "Client email here"}</dd>
+                  </div>
+                  <div className="project-detail__demo-access-item">
+                    <dt>Admin email</dt>
+                    <dd>{project.demoAccess.adminEmail ?? "Admin email here"}</dd>
+                  </div>
+                  <div className="project-detail__demo-access-item">
+                    <dt>Password</dt>
+                    <dd>{project.demoAccess.password ?? "Password here"}</dd>
+                  </div>
+                </dl>
+              </section>
+            ) : null}
+
             <h2>Overview</h2>
             {Array.isArray(project.description) ? (
               project.description.map((p) => (

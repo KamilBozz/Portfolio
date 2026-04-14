@@ -1,5 +1,5 @@
 export type ProjectLink = {
-  label: "GitHub" | "Live App" | "Case Study" | "Instagram" | "Website";
+  label: "GitHub" | "Live App" | "Case Study" | "Instagram" | "Website" | "GitHub Frontend" | "GitHub Backend";
   url: string;
 };
 
@@ -80,6 +80,14 @@ export type ProjectCaseStudy = {
   };
 };
 
+export type ProjectDemoAccess = {
+  heading: string;
+  note?: string;
+  clientEmail?: string;
+  adminEmail?: string;
+  password?: string;
+};
+
 export type Project = {
   title: string;
   slug: string; // route: /projects/:slug
@@ -98,6 +106,7 @@ export type Project = {
   video?: ProjectVideo; // optional
   timeframe?: string;
   role?: string;
+  demoAccess?: ProjectDemoAccess;
 
   caseStudy?: ProjectCaseStudy; // optional (used for /projects/jargon case study layout)
   featured?: boolean;
